@@ -47,6 +47,7 @@ public class Atendente {
 		System.out.println("Preço: R$" + fruta.getPreco());
 		System.out.println("Quantidade: " + fruta.getQuantidade());
 		System.out.println("Tipo: " + fruta.getTipo());
+		System.out.println("ID: " + fruta.getId());
 	}
 
 	public String removerFruta() {

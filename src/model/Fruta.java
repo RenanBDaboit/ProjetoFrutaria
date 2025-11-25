@@ -5,12 +5,14 @@ public class Fruta {
 	private double preco;
 	private int quantidade;
 	private String tipo;
+	private int id;
 
 	public Fruta() {
 		this.nome = "";
 		this.preco = 0.0;
 		this.quantidade = 0;
 		this.tipo = "";
+		this.id = 0;
 	}
 
 	public Fruta(String nome, double preco, int quantidade, String tipo) {
@@ -18,8 +20,9 @@ public class Fruta {
 		this.preco = preco;
 		this.quantidade = quantidade;
 		this.tipo = tipo;
+		id++;
 	}
-
+	
 	public String getNome() {
 		return nome;
 	}
@@ -50,6 +53,10 @@ public class Fruta {
 	
 	public void setTipo(String tipoFruta) {
 		this.tipo = tipoFruta;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 }
