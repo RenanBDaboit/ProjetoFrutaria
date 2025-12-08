@@ -1,18 +1,18 @@
 package model;
 
-public class Fruta extends Produto {
+public class Verdura extends Produto {
 
 	private int quantidade;
 	private String tipo;
 
-	public Fruta(String nome, double preco, int id) {
-	
+	public Verdura(String nome, double preco, int id) {
+		
 		super(nome, preco, id);
 		this.quantidade = 0;
 		this.tipo = "";
 	}
 
-	public Fruta(String nome, double preco, int id, int quantidade, String tipo) {
+	public Verdura(String nome, double preco, int id, int quantidade, String tipo) {
 
 		super(nome, preco, id);
 		this.quantidade = quantidade;

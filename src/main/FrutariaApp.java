@@ -10,6 +10,9 @@ public class FrutariaApp {
 
 		do {
 			opcaoMenuEscolhida = atendente.menuPrincipal();
+			if (opcaoMenuEscolhida == 0) {
+				break;
+			}
 			estoque.gerenciarEstoque(opcaoMenuEscolhida, atendente);
 		} while (opcaoMenuEscolhida != 0);
 
