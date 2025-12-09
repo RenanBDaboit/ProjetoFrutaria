@@ -6,7 +6,7 @@ public class Verdura extends Produto {
 	private String tipo;
 
 	public Verdura(String nome, double preco, int id) {
-		
+
 		super(nome, preco, id);
 		this.quantidade = 0;
 		this.tipo = "";
@@ -22,16 +22,20 @@ public class Verdura extends Produto {
 	public int getQuantidade() {
 		return quantidade;
 	}
-	
-	public void setQuantidade(int quantidadeFruta) {
-		this.quantidade = quantidadeFruta;
+
+	public void setQuantidade(int quantidadeVerdura) {
+		this.quantidade = quantidadeVerdura;
 	}
-	
+
 	public String getTipo() {
 		return tipo;
 	}
-	
-	public void setTipo(String tipoFruta) {
-		this.tipo = tipoFruta;
+
+	public void setTipo(String tipoVerdura) {
+		this.tipo = tipoVerdura;
+	}
+
+	public String toString() {
+		return "Verdura: " + nome + " - R$" + preco + " - Qtd:" + quantidade + " - Tipo: " + tipo + " | ID: " + id;
 	}
 }
