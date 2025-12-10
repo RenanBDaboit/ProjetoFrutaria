@@ -21,147 +21,157 @@ public class Atendente {
 		System.out.println("4 - Remover produto");
 		System.out.println("5 - verificar total de produtos");
 		System.out.println("0 - Sair");
-
-		boolean opcaoInvalida = true;
-
-		while (opcaoInvalida) {
+		
+		while (true) {
 			try {
 				int opcao = input.nextInt();
-				input.nextLine();
-				opcaoInvalida = false;
 				System.out.println();
 				return opcao;
 			} catch (InputMismatchException erro) {
 				System.out.println("Erro, número digitado inválido");
+				input.nextLine();
 			}
 		}
-		return -1;
 	}
 
 	public int menuCadastrar() {
+		input.nextLine();
 		System.out.println("1 - Cadastrar fruta");
 		System.out.println("2 - Cadastrar verdura");
 		System.out.println("3 - Cadastrar produto de limpeza");
 		System.out.println("0 - Sair");
-
-		boolean opcaoInvalida = true;
-
-		while (opcaoInvalida) {
+		
+		while (true) {
 			try {
 				int opcao = input.nextInt();
-				input.nextLine();
-				opcaoInvalida = false;
 				System.out.println();
 				return opcao;
 			} catch (InputMismatchException erro) {
 				System.out.println("Erro, número digitado inválido");
+				input.nextLine();
 			}
 		}
-		return -1;
 	}
 
 	public int menuListar() {
+		input.nextLine();
 		System.out.println("1 - Listar frutas");
 		System.out.println("2 - Listar verduras");
 		System.out.println("3 - Listar produtos de limpeza");
 		System.out.println("0 - Sair");
-
-		boolean opcaoInvalida = true;
-
-		while (opcaoInvalida) {
+		
+		while (true) {
 			try {
 				int opcao = input.nextInt();
-				input.nextLine();
-				opcaoInvalida = false;
 				System.out.println();
 				return opcao;
 			} catch (InputMismatchException erro) {
 				System.out.println("Erro, número digitado inválido");
+				input.nextLine();
 			}
 		}
-		return -1;
 	}
 
 	public int menuPesquisar() {
+		input.nextLine();
 		System.out.println("1 - Pesquisar frutas");
 		System.out.println("2 - Pesquisar verduras");
 		System.out.println("3 - Pesquisar produtos de limpeza");
 		System.out.println("0 - Sair");
-
-		boolean opcaoInvalida = true;
-
-		while (opcaoInvalida) {
+		
+		while (true) {
 			try {
 				int opcao = input.nextInt();
-				input.nextLine();
-				opcaoInvalida = false;
 				System.out.println();
 				return opcao;
 			} catch (InputMismatchException erro) {
 				System.out.println("Erro, número digitado inválido");
+				input.nextLine();
 			}
 		}
-		return -1;
 	}
 
 	public int menuRemover() {
+		input.nextLine();
 		System.out.println("1 - Remover frutas");
 		System.out.println("2 - Remover verduras");
 		System.out.println("3 - Remover produtos de limpeza");
 		System.out.println("0 - Sair");
-
-		boolean opcaoInvalida = true;
-
-		while (opcaoInvalida) {
+		
+		while (true) {
 			try {
 				int opcao = input.nextInt();
-				input.nextLine();
-				opcaoInvalida = false;
 				System.out.println();
 				return opcao;
 			} catch (InputMismatchException erro) {
 				System.out.println("Erro, número digitado inválido");
+				input.nextLine();
 			}
 		}
-		return -1;
 	}
 
 	public int menuVerTotal() {
+		input.nextLine();
 		System.out.println("1 - Ver total de frutas");
 		System.out.println("2 - Ver total de verduras");
 		System.out.println("3 - Ver total de produtos de limpeza");
 		System.out.println("4 - Ver total de produtos");
 		System.out.println("0 - Sair");
-
-		boolean opcaoInvalida = true;
-
-		while (opcaoInvalida) {
+		
+		while (true) {
 			try {
 				int opcao = input.nextInt();
-				input.nextLine();
-				opcaoInvalida = false;
 				System.out.println();
 				return opcao;
 			} catch (InputMismatchException erro) {
 				System.out.println("Erro, número digitado inválido");
+				input.nextLine();
 			}
 		}
-		return -1;
 	}
 
 	public String produtoNome() {
+		input.nextLine();
 		System.out.println("Digite o nome do produto:");
 		return input.nextLine();
 	}
 
 	public double produtoPreco() {
 		System.out.println("Digite o preço do produto:");
-		return input.nextDouble();
+		
+		double precoProduto;
+		
+		while (true) {
+			try {
+				precoProduto = input.nextDouble();
+				return precoProduto;
+			} catch (InputMismatchException erro) {
+				System.out.println("Erro, preço digitado inválido");
+			}
+		}
 	}
 
 	public int produtoQuantidade() {
 		System.out.println("Digite a quantidade:");
-		return input.nextInt();
+		
+		int quantidadeProduto;
+		
+		while (true) {
+			try {
+				quantidadeProduto = input.nextInt();
+				if (quantidadeProduto > 0) {
+					break;
+				}
+				else {
+					System.out.println("Erro, quantidade digitada inválida");
+				}
+				
+			} catch (InputMismatchException erro) {
+				System.out.println("Erro, quantidade digitada inválida");
+			}
+		}
+		
+		return quantidadeProduto;
 	}
 
 	public String produtoTipo() {
@@ -194,7 +204,18 @@ public class Atendente {
 
 	public int produtoId() {
 		System.out.println("Digite o ID do produto");
-		return input.nextInt();
+
+		int idProduto;
+		
+		while (true) {
+			try {
+				idProduto = input.nextInt();
+				return idProduto;
+			} catch (InputMismatchException erro) {
+				System.out.println("Erro, id digitado inválido");
+				input.nextLine();
+			}
+		}
 	}
 
 	public String removerFruta() {

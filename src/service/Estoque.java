@@ -84,19 +84,20 @@ public class Estoque {
 						if (listaProdutos.isEmpty()) {
 							atendente.mensagemListaVazia();
 						}
-						
-						boolean semFruta = true;
-						
-						for (Produto produto : listaProdutos) {
+						else {
+							boolean semFruta = true;
 							
-							if (produto instanceof Fruta fruta) {
-								atendente.vizualizarProdutos(fruta);
-								semFruta = false;
+							for (Produto produto : listaProdutos) {
+								
+								if (produto instanceof Fruta fruta) {
+									atendente.vizualizarProdutos(fruta);
+									semFruta = false;
+								}
 							}
-						}
-						
-						if (semFruta) {
-							atendente.mensagemNenhumaFruta();
+							
+							if (semFruta) {
+								atendente.mensagemNenhumaFruta();
+							}
 						}
 					}
 					
@@ -105,19 +106,20 @@ public class Estoque {
 						if (listaProdutos.isEmpty()) {
 							atendente.mensagemListaVazia();
 						}
-						
-						boolean semVerdura = true;
-						
-						for (Produto produto : listaProdutos) {
+						else {							
+							boolean semVerdura = true;
 							
-							if (produto instanceof Verdura verdura) {
-								atendente.vizualizarProdutos(verdura);
-								semVerdura = false;
+							for (Produto produto : listaProdutos) {
+								
+								if (produto instanceof Verdura verdura) {
+									atendente.vizualizarProdutos(verdura);
+									semVerdura = false;
+								}
 							}
-						}
-						
-						if (semVerdura) {
-							atendente.mensagemNenhumaVerdura();
+							
+							if (semVerdura) {
+								atendente.mensagemNenhumaVerdura();
+							}
 						}
 					}
 					
@@ -126,19 +128,20 @@ public class Estoque {
 						if (listaProdutos.isEmpty()) {
 							atendente.mensagemListaVazia();
 						}
-						
-						boolean semProdutoDeLimpeza = true;
-						
-						for (Produto produto : listaProdutos) {
+						else {
+							boolean semProdutoDeLimpeza = true;
 							
-							if (produto instanceof ProdutoDeLimpeza produtoDeLimpeza) {
-								atendente.vizualizarProdutos(produtoDeLimpeza);
-								semProdutoDeLimpeza = false;
+							for (Produto produto : listaProdutos) {
+								
+								if (produto instanceof ProdutoDeLimpeza produtoDeLimpeza) {
+									atendente.vizualizarProdutos(produtoDeLimpeza);
+									semProdutoDeLimpeza = false;
+								}
 							}
-						}
-						
-						if (semProdutoDeLimpeza) {
-							atendente.mensagemNenhumProdutoDeLimpeza();
+							
+							if (semProdutoDeLimpeza) {
+								atendente.mensagemNenhumProdutoDeLimpeza();
+							}
 						}
 					}
 			
